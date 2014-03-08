@@ -65,6 +65,7 @@ public class RtmpConnection implements RtmpClient, PacketRxHandler, ThreadContro
         this.appName = appName;
         rtmpSessionInfo = new RtmpSessionInfo();
         rxPacketQueue = new ConcurrentLinkedQueue<RtmpPacket>();
+        tcUrl = "rtmp://" + host + ":" + port + "/" + appName;
     }
 
     @Override
